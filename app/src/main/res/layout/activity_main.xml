@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.no0ne.mp.MainActivity" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/image"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/now_playing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Now Playing"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/song_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/now_playing"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/song_artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/song_title"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textSize="25dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/song_artist">
+
+        <Button
+            android:id="@+id/backward"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="BACKWARD"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginTop="70dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp" >
+
+            <Button
+                android:id="@+id/play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PLAY"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" PAUSE"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/loop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOOP"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/forward"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="FORWARD"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginTop="70dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
